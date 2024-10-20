@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: extra-credit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sahithi16430566
+  template:
+    metadata:
+      labels:
+        app: sahithi16430566
+    spec:
+      containers:
+      - name: sahithi16430566
+        image: sahithi16430566:latest # Replace with your Docker image name
+        ports:
+        - containerPort: 8080
